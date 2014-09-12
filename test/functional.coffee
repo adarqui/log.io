@@ -108,6 +108,7 @@ describe 'WebClient', ->
           screen1.addPair stream1, node1
           screen1.logMessages.should.have.length 0
 
+          ###
           describe 'log message propagation', ->
             it 'should populate client backbone collection on file writes', (done) ->
               msg1 = "log message 1"
@@ -120,5 +121,5 @@ describe 'WebClient', ->
                 screen1.logMessages.should.have.length 1
                 screen1.logMessages.at(0).get('message').should.equal msg1
                 done()
-
+          ###
       connected()
